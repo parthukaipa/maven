@@ -1,5 +1,5 @@
 
-node('maven') {
+node('docker') {
 // Delete the workspace
 //deleteDir()
 stage('Retrieve source code') {

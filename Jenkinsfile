@@ -1,5 +1,5 @@
 
-node('docker') {
+node('docker22') {
 // Delete the workspace
 //deleteDir()
 stage('Retrieve source code') {

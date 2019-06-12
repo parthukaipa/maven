@@ -25,5 +25,8 @@ try {
       currentBuild.result = "FAILED"
       throw e
     }
+    stage('copyS3'){
+        s3Upload consoleLogLevel: 'INFO', dontWaitForConcurrentBuildCompletion: false, entries: [[bucket: '9985', excludedFile: '', flatten: false, gzipFiles: false, keepForever: false, managedArtifacts: false, noUploadOnFailure: true, selectedRegion: 'ap-east-1', showDirectlyInBrowser: false, sourceFile: '/opt/Apache Tomcat/8.5.42/webapps/*.war', storageClass: 'STANDARD', uploadFromSlave: false, useServerSideEncryption: false]], pluginFailureResultConstraint: 'FAILURE', profileName: 'reddys3', userMetadata: []
 }
 
+}
